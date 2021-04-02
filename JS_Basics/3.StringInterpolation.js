@@ -19,3 +19,14 @@ function geek()
 }
 
 console.log(`${geek()}, Welcome to ${x}`);
+
+
+
+function isEven(num)
+{
+    console.log(`number is ${num%2===0? 'even.' : 'odd.'}`);
+    return 0;
+}
+
+isEven(73);
+
