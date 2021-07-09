@@ -22,6 +22,8 @@ console.log(`${geek()}, Welcome to ${x}`);
 
 
 
+// === check for Identical equal and same data type
+
 function isEven(num)
 {
     console.log(`number is ${num%2===0? 'even.' : 'odd.'}`);
@@ -30,3 +32,11 @@ function isEven(num)
 
 isEven(73);
 
+
+
+var listing_price = 100;
+var selling_price = 20;
+var result = listing_price > selling_price;
+
+console.log(typeof result);
+console.log(result)
