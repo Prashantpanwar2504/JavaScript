@@ -51,3 +51,23 @@ switch(age)
     default:
         console.log("Dead");
 }
+
+/*
+if we don't provid the break; then their
+will be a full through.
+*/
+console.log("switch without break=============================")
+var age = 10;
+switch(age)
+{
+    case 5:
+        console.log("Kid");
+    case 10:
+        console.log("Good Kid");
+    case 25:
+        console.log("Man");
+    case 50:
+        console.log("Senior citizen");
+    default:
+        console.log("Dead");
+}

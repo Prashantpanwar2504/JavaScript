@@ -44,6 +44,7 @@ function getuserRole(name, role)
 }
 console.log(getuserRole("Prashant", "oidahf"));
 
+console.log("======================================================================")
 // Uniqe feature of Javascript
 var getuserrole = function(name, role)
 {
@@ -65,7 +66,7 @@ var getuserrole = function(name, role)
 
 console.log(getuserrole("Prashant", "oidahf"));
 
-
+console.log("===================================================================")
 // function declaretion is saves and made available for calling
 //Context in javascript.
 calling();          
@@ -81,7 +82,7 @@ function calling()
 // Global Context : Collecting info from everything and about everything in mejarity of the cases. it's
 // window object available. window object is tide majority with the Browser
 
-
+console.log("Context=========================================================")
 /*
 Execution Context: 
 1. Variable Object,
@@ -124,3 +125,90 @@ calling4("PRashant");
 console.log(name1);
 var name1 = "Prashant";
 console.log(name1);
+
+
+
+/*
+                                Scope chaning
+
+Scope is the way of accessing variable function and objects in some particulare
+part of your code during runtime.
+                                with scope we provide some level of security to our code.
+we have access to the stuff we need at a time
+
+There are two kinds of scope.
+    1. Global scope
+    2. Local scope
+
+Scope chaining: establish scope for the given function. each function defined, has it's own 
+nested scope within another function has a local scope which is linked to the outer function
+this link is collled chaining.
+*/
+
+//Global scope
+console.log("Global scope======================================================")
+var v1 = "Prashant";
+console.log("line 151:"+v1);
+function sayname()
+{
+    console.log("line 154:" +v1);
+}
+sayname();
+
+// Local scope
+console.log("Local scope======================================================")
+var v2 = "Prashant";
+console.log("line 161:"+v2);
+function sayName()  // if the function have local varible the prioty is 
+{                   // given to the local varialbe not to global variable.                    
+    var v2 = "MR P";
+    console.log("line 165:"+v2);
+}
+sayName();
+
+// Note: { } in the statement like in if, for, switch, while, not consiider as a scope.
+// { } in the function will be consider as a scope.
+
+console.log("{ }==========================================================");
+var x1="prashant";
+console.log("line174:" +x1);
+function sayname3()
+{
+    var x1 = "Mr P";
+    console.log("line 178:"+x1);
+    sayname4();
+    function sayname4()
+    {
+        console.log("inside function: line 182:" +x1);
+    }
+}
+sayname3();
+
+
+/*
+when every function has the var in their scope then the prioty will be given the them.
+*/
+
+console.log("scope==========================================================")
+var Name = "prsshant";
+console.log("line 194:"+Name); //global scope
+
+function sayname5()
+{
+    var Name="Mr. PP";
+    console.log("line 199:"+Name);  //local scope with in the fuction
+    sayname6();
+}
+function sayname6()
+{
+    var Name = "MR. Prashant Panwar";
+    console.log("line 206:"+Name); //locla scope within this function
+}
+sayname5();
+
+
+/*
+this keyword: is the reference variable the t refer to the current object.
+*/
+console.log("this=======================================================");
+console.log(this);
